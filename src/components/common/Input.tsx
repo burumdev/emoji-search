@@ -25,7 +25,7 @@ const Input: React.FC<IInputProps> = ({
 	})
 
 	const onChange = (e: any) => {
-		props.onChange(e.target.value);
+		props.onChange(e, e.target.value);
 	}
 
 	return (

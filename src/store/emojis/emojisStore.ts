@@ -10,6 +10,7 @@ import { IRawEmoji, IEmoji } from './emojis.types';
 //subjects
 export const rawEmojis$ = new BehaviorSubject<IRawEmoji[]>([]);
 export const emojiSearchResults$ = new BehaviorSubject<IEmoji[]>([]);
+export const searchLoading$ = new BehaviorSubject<boolean>(false);
 
 //observables
 export const setEmojis$ = rawEmojis$.pipe(
