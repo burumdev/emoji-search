@@ -1,17 +1,18 @@
-import { BehaviorSubject, combineLatestWith } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 //setters
 import { emojisSetter } from './emojisSetters';
 
 //types
-import { IRawEmoji } from './emojis.types';
+import { IRawEmoji, IEmoji } from './emojis.types';
 
 //subjects
 export const rawEmojis$ = new BehaviorSubject<IRawEmoji[]>([]);
+export const emojiSearchResults$ = new BehaviorSubject<IEmoji[]>([]);
 
 //observables
-const setEmojis$ = rawEmojis$.pipe(
+export const setEmojis$ = rawEmojis$.pipe(
 	map(emos =>
 		emojisSetter(emos)
 	)
