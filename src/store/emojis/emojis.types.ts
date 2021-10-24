@@ -6,6 +6,5 @@ export interface IRawEmoji {
 }
 
 export interface IEmoji extends IRawEmoji {
-	titleLowerCase: string;
 	keywordsArr: string[]
 }

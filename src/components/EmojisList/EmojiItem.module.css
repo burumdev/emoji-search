@@ -1,0 +1,26 @@
+
+.EmojiItem {
+	padding: 0.5rem;
+	width: 150px;
+	flex-grow: 1;
+}
+
+.EmojiItemInner {
+	padding: 1rem 0.5rem;
+	background-color: aliceblue;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+}
+
+.EmojiItemTitle {
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.EmojiItemSymbol {
+	font-size: 32px;
+	margin-bottom: 1rem;
+}

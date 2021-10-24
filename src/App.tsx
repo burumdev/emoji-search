@@ -6,6 +6,7 @@ import { getEmojis } from './store/emojis/emojisActions';
 
 //comps
 import EmojiSearcher from './components/EmojiSearcher/EmojiSearcher';
+import EmojisList from './components/EmojisList/EmojisList';
 
 const App: React.FC = () => {
 	//effect
@@ -17,6 +18,7 @@ const App: React.FC = () => {
 		<div className="App">
 			<h1>Emoji Search</h1>
 			<EmojiSearcher />
+			<EmojisList />
 		</div>
 	);
 }

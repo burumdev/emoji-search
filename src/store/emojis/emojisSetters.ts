@@ -7,7 +7,6 @@ export const emojisSetter = (emojis: IRawEmoji[]): IEmoji[] => {
 		const keywordsArr: string[] = emo.keywords.split(' ');
 		return {
 			...emo,
-			titleLowerCase: emo.title.toLowerCase(),
 			keywordsArr
 		}
 	})
