@@ -1,10 +1,34 @@
-# Getting Started with Create React App
+# Emoji Search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A task study with React and RxJS that does title and keyword based search in a given set of emojis.
+
+## To run the project
+
+First install the dependencies
+
+### `yarn`
+
+Then start the mock json server
+
+### `yarn json-server`
+
+Then you can either start the development server...
+
+### `yarn start`
+
+Or get a production build and run a static production server
+
+### `yarn build`
+### `yarn add serve`
+### `yarn serve -s build`
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `yarn json-server`
+
+To start the mock database server
 
 ### `yarn start`
 
