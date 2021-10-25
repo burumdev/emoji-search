@@ -40,6 +40,8 @@ export const searchEmojis = (searchTerm: string) => {
 							relPoint += 20 * directMatchCount;
 						} else if (emott.startsWith(sw)) {
 							relPoint += 10;
+						} else if (emott.length > 2 && sw.startsWith(emott)) {
+							relPoint += 5;
 						}
 					})
 					emoKeywords.forEach(emok => {
@@ -48,6 +50,8 @@ export const searchEmojis = (searchTerm: string) => {
 							relPoint += 20 * directMatchCount;
 						} else if (emok.startsWith(sw)) {
 							relPoint += 10;
+						} else if (emok.length > 2 && sw.startsWith(emok)) {
+							relPoint += 5;
 						}
 					})
 				})
@@ -63,5 +67,5 @@ export const searchEmojis = (searchTerm: string) => {
 	).subscribe(searchResults => {
 		emojiSearchResults$.next(searchResults);
 		searchLoading$.next(false);
-	});
+	}).unsubscribe();
 }
