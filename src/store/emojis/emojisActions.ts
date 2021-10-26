@@ -1,19 +1,15 @@
 
 import { of, combineLatestWith } from 'rxjs';
-import { ajax } from 'rxjs/ajax';
 import { map } from 'rxjs/operators';
 
 //obs
 import { rawEmojis$, setEmojis$, emojiSearchResults$, searchLoading$ } from './emojisStore';
 
-const API_URL = 'http://localhost:4000/emojis';
+import emojiData from './emoji-list.json';
 
-export const getEmojis = () => ajax.getJSON(API_URL)
-	.pipe(
-		map((values: any) => {
-			rawEmojis$.next(values);
-		})
-	).subscribe();
+export const getEmojis = () => {
+	rawEmojis$.next(emojiData);
+}
 
 export const searchEmojis = (searchTerm: string) => {
 	if (searchTerm === '') {
